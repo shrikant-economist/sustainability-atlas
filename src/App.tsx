@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const Button = lazy(() => import('@mui/material/Button'));
+const AtlasImage = lazy(() => import('./components/AtlasImage'));
 
 const theme = createTheme({
   palette: {
@@ -15,9 +16,16 @@ const theme = createTheme({
 });
 
 function App() {
+  const imageUrl = require('./assets/images/Intro 2.svg');
   return (
-    <ThemeProvider theme={theme}>
-      <div style={{ textAlign: 'center' }}>
+    <div className="app">
+      <div className="app-header">
+        <p>Sustainability Atlas</p>
+      </div>
+      <div className="app-atlas">
+        <AtlasImage imageUrl={imageUrl} altText={'intro-atlas'}></AtlasImage>
+      </div>
+      <ThemeProvider theme={theme}>
         <Suspense
           fallback={
             <CircularProgress
@@ -27,12 +35,12 @@ function App() {
             />
           }
         >
-          <Button variant="contained" color="primary">
+          {/* <Button variant="contained" color="primary">
             Hello World
-          </Button>
+          </Button> */}
         </Suspense>
-      </div>
-    </ThemeProvider>
+      </ThemeProvider>
+    </div>
   );
 }
 

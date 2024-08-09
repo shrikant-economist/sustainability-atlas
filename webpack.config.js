@@ -1,4 +1,6 @@
 const CompressionPlugin = require('compression-webpack-plugin');
+const path = require('path');
+
 module.exports = function override(config, env) {
   if (env === 'production') {
     config.plugins.push(
@@ -11,4 +13,31 @@ module.exports = function override(config, env) {
       })
     )}
   return config;
+};
+
+module.exports = {
+  // Other configurations...
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+              context: 'src', // Prevents the [path] from including `src`
+              outputPath: 'assets/images',
+              publicPath: 'assets/images',
+            },
+          },
+        ],
+      },
+    ],
+  },
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, 'public/assets'),
+    },
+  },
 };
