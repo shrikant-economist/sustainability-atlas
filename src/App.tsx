@@ -3,28 +3,29 @@ import './App.css';
 // import { css } from '@emotion/react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
+import { useTranslation } from 'react-i18next';
+import imageUrl from './assets/images/Intro 2.svg';
 
-const Button = lazy(() => import('@mui/material/Button'));
 const TitleText = lazy(() => import('./components/TitleText'));
 const AtlasImage = lazy(() => import('./components/AtlasImage'));
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: process.env.REACT_APP_THEME_COLOR || '#1976d2',
+      main: import.meta.env.REACT_APP_THEME_COLOR || '#1976d2',
     },
   },
 });
 
 function App() {
-  const imageUrl = require('./assets/images/Intro 2.svg');
+  const { t } = useTranslation();
   return (
     <div className="app">
       <div className="app-header">
-        <p>Sustainability Atlas</p>
+        <p>{t('appHeader')}</p>
       </div>
       <div className="app-atlas">
-        <AtlasImage imageUrl={imageUrl} altText={'intro-atlas'}></AtlasImage>
+        <AtlasImage imageUrl={imageUrl} altText={t('altText')}></AtlasImage>
       </div>
       <ThemeProvider theme={theme}>
         <Suspense
