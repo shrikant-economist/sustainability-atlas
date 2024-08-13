@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const Button = lazy(() => import('@mui/material/Button'));
+const TitleText = lazy(() => import('./components/TitleText'));
 const AtlasImage = lazy(() => import('./components/AtlasImage'));
 
 const theme = createTheme({
@@ -35,9 +36,10 @@ function App() {
             />
           }
         >
-          {/* <Button variant="contained" color="primary">
-            Hello World
-          </Button> */}
+          <TitleText
+          heading='The Sustainability Atlas'
+          subHeading='Combining 20 indices, over 2,000 indicators, 150 reports and 200 articles from TSP to give you clear business recommendations for your sustainability problems.'
+          footer='Try asking about…'/>
         </Suspense>
       </ThemeProvider>
     </div>
