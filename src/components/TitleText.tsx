@@ -7,7 +7,7 @@ interface TitleTextProps {
     footer?: string;
 }
 
-const TitleText: React.FC<TitleTextProps> = ({ heading, subHeading, footer }) => {
+const TitleText: React.FC<TitleTextProps> = React.memo(({ heading, subHeading = '', footer = '' }) => {
     return (
         <div className='titleText'>
             <div className='heading'>{heading}</div>
@@ -15,6 +15,6 @@ const TitleText: React.FC<TitleTextProps> = ({ heading, subHeading, footer }) =>
             {footer && <div className='footer'>{footer}</div>}
         </div>
     );
-};
+});
 
 export default TitleText;
