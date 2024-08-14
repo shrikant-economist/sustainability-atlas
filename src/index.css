@@ -1,20 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    'GT-Zirkon',
+    'Econ Sans',
+    'sans-serif',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:
+    'GT-Zirkon',
+    'Econ Sans',
+    'sans-serif',
+    'source-code-pro',
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New' monospace;
 }
 
 @font-face {
   font-family: 'GT-Zirkon';
   src: url('./assets/fonts/GT-Zirkon-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Define Econ Sans font */
+@font-face {
+  font-family: 'Econ Sans';
+  src: url('./assets/fonts/EconomistSans-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
