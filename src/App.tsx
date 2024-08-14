@@ -1,14 +1,9 @@
-import React, { useState, Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 // import { css } from '@emotion/react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CircularProgress from '@mui/material/CircularProgress';
-import { useTranslation } from 'react-i18next';
-import imageUrl from './assets/images/Intro 2.svg';
-
-const TitleText = lazy(() => import('./components/TitleText'));
-const SearchBox = lazy(() => import('./components/searchBox/SearchBox'));
-const AtlasImage = lazy(() => import('./components/AtlasImage'));
+import AppRouter from './Router';
 
 const theme = createTheme({
   palette: {
@@ -19,32 +14,8 @@ const theme = createTheme({
 });
 
 function App() {
-  const { t } = useTranslation();
-  const [searchValue, setSearchValue] = useState('');
-  const [ShowResetBtn, setShowResetBtn] = useState(false);
-  const [showHelpText, SetshowHelpText] = useState(true);
-  const setSearchVal = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setSearchValue(event.target.value);
-  };
-  const handleSearch = () => {
-    console.log('Search button clicked:  ' + searchValue);
-    setShowResetBtn(true);
-    SetshowHelpText(false);
-  };
-  const handleReset = () => {
-    setSearchValue('');
-    setShowResetBtn(false);
-    SetshowHelpText(true);
-  };
-
   return (
     <div className="app">
-      <div className="app-header">
-        <p>{t('appHeader')}</p>
-      </div>
-      <div className="app-atlas">
-        <AtlasImage imageUrl={imageUrl} altText={t('altText')}></AtlasImage>
-      </div>
       <ThemeProvider theme={theme}>
         <Suspense
           fallback={
@@ -55,19 +26,7 @@ function App() {
             />
           }
         >
-          <TitleText
-            heading="The Sustainability Atlas"
-            subHeading="Combining 20 indices, over 2,000 indicators, 150 reports and 200 articles from TSP to give you clear business recommendations for your sustainability problems."
-            footer="Try asking about…"
-          />
-          <SearchBox
-            value={searchValue}
-            onChange={setSearchVal}
-            handleSearch={handleSearch}
-            ShowResetBtn={ShowResetBtn}
-            handleReset={handleReset}
-            ShowHelpText={showHelpText}
-          />
+          <AppRouter />
         </Suspense>
       </ThemeProvider>
     </div>
