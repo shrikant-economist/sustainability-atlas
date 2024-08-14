@@ -1,10 +1,20 @@
-.search_box_div {
+.main_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  padding: 14px 156px;
+  width: 100%;
+  padding: 14px 104px;
+  gap: 20px;
+  position: absolute;
+  top: 80%;
+}
+.search_box_div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .search_box {
@@ -13,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   background-color: #fff;
   border-radius: 100px;
   border: 1px solid #000;
@@ -24,7 +34,18 @@
 }
 
 .css-66dh3a-MuiInputBase-input-MuiInput-input {
-  color: #595959 !important;
+  color: var(--London-London-5, var(--London-London-5, #0d0d0d)) !important;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: "Econ Sans", sans-serif !important;
+  font-size: 22px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 165% !important;
+  caret-color: #127d66;
+  caret-shape: block;
+}
+.css-1hdk7t2-MuiInputBase-root-MuiInput-root {
+  color: var(--London-London-5, var(--London-London-5, #0d0d0d)) !important;
   font-variant-numeric: lining-nums proportional-nums !important;
   font-family: 'Econ Sans' !important;
   font-size: 22px !important;
@@ -33,10 +54,18 @@
   line-height: 165% !important;
   caret-color: #127d66;
   caret-shape: block;
+  padding: 0px !important;
 }
 
 .css-66dh3a-MuiInputBase-input-MuiInput-input::placeholder {
-  padding-left: 6px;
+  padding-left: 6px !important;
+  color: var(--London-London-35, var(--London-London-35, #595959)) !important;
+  font-variant-numeric: lining-nums proportional-nums !important;
+}
+
+.reset_div {
+  width: 42px;
+  height: 42px;
 }
 
 .icon_div {
@@ -68,23 +97,28 @@
 }
 
 @media screen and (max-width: 768px) {
-  .search_box_div {
+  .main_div {
     padding: 18px 20px;
   }
 
   .search_box {
     display: inline-flex;
     min-height: 50px;
-    padding: 11px 16px 8px 16px !important;
+    padding: 11px 16px 11px 16px !important;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
     border-radius: 26px;
   }
 
+  .css-66dh3a-MuiInputBase-input-MuiInput-input::placeholder {
+    padding-left: 6px !important;
+  }
+
   .css-1hdk7t2-MuiInputBase-root-MuiInput-root {
     display: flex;
     flex-direction: column;
+    padding: 0px !important;
   }
 
   .css-1laqsz7-MuiInputAdornment-root {
@@ -100,5 +134,9 @@
     display: flex;
     gap: 12px;
     padding: 0px;
+  }
+  .help_text_span {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
