@@ -3,5 +3,8 @@
   "altText": "Intro Atlas",
   "heading": "The Sustainability Atlas",
   "subHeading": "Combining 20 indices, over 2,000 indicators, 150 reports and 200 articles from TSP to give you clear business recommendations for your sustainability problems.",
-  "footerText": "Try asking about…"
+  "footerText": "Try asking about…",
+  "searchPlaceholde_md": "Ask your sustainability question",
+  "searchPlaceholde_lg": "Ask your sustainability or business problem question",
+  "searchHelperText": "Data caveat here to remind users this is an AI, not advice lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna"
 }

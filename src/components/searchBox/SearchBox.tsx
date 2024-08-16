@@ -2,12 +2,14 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import './SearchBox.css';
-import { ReactComponent as SendIcon } from '../../assets/icons/SendIcon.svg';
-import { ReactComponent as CrossBtn } from '../../assets/icons/CrossBtn.svg';
-import { ReactComponent as ResetIcon } from '../../assets/icons/ResetBtn.svg';
-import { ReactComponent as QuestionMark } from '../../assets/icons/QuestionMark.svg';
+import styled from '@emotion/styled';
+import SendIcon from '../../assets/icons/SendIcon.svg';
+import CrossBtn from '../../assets/icons/CrossBtn.svg';
+import ResetIcon from '../../assets/icons/ResetBtn.svg';
+import QuestionMark from '../../assets/icons/QuestionMark.svg';
 const TextField = React.lazy(() => import('@mui/material/TextField'));
 const InputAdornment = React.lazy(() => import('@mui/material/InputAdornment'));
+import { useTranslation } from 'react-i18next';
 
 interface SearchBoxProps {
   value: string;
@@ -17,6 +19,11 @@ interface SearchBoxProps {
   handleReset: () => void;
   ShowHelpText: boolean;
 }
+
+const StyledIcons = styled.img`
+  height: auto;
+  width: auto;
+`;
 
 const SearchBox: React.FC<SearchBoxProps> = ({
   value,
@@ -28,6 +35,7 @@ const SearchBox: React.FC<SearchBoxProps> = ({
 }) => {
   const theme = useTheme();
   const isScreenMD = useMediaQuery(theme.breakpoints.up('md'));
+  const { t } = useTranslation();
 
   const handleCross = () => {
     onChange({
@@ -39,10 +47,14 @@ const SearchBox: React.FC<SearchBoxProps> = ({
       <div className="search_box_div">
         {isScreenMD && (
           <div className="reset_div">
-            {ShowResetBtn && <ResetIcon onClick={handleReset} />}
+            {ShowResetBtn && (
+              <StyledIcons src={ResetIcon} onClick={handleReset} />
+            )}
           </div>
         )}
-        {ShowResetBtn && !isScreenMD && <ResetIcon onClick={handleReset} />}
+        {ShowResetBtn && !isScreenMD && (
+          <StyledIcons src={ResetIcon} onClick={handleReset} />
+        )}
         <TextField
           variant="standard"
           value={value}
@@ -55,11 +67,13 @@ const SearchBox: React.FC<SearchBoxProps> = ({
               <InputAdornment position="end">
                 {value != '' && (
                   <div className="icon_div">
-                    <CrossBtn
+                    <StyledIcons
+                      src={CrossBtn}
                       className="cursor_pointer"
                       onClick={handleCross}
                     />
-                    <SendIcon
+                    <StyledIcons
+                      src={SendIcon}
                       className="cursor_pointer"
                       onClick={handleSearch}
                     />
@@ -70,8 +84,8 @@ const SearchBox: React.FC<SearchBoxProps> = ({
           }}
           placeholder={
             isScreenMD
-              ? 'Ask your sustainability or business problem question'
-              : 'Ask your sustainability question'
+              ? t("searchPlaceholde_lg")
+              : t("searchPlaceholde_md")
           }
           multiline
           maxRows={5}
@@ -79,9 +93,8 @@ const SearchBox: React.FC<SearchBoxProps> = ({
       </div>
       {ShowHelpText && (
         <span className="help_text_span">
-          Data caveat here to remind users this is an AI, not advice lorem ipsum
-          dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-          euismod tincidunt ut laoreet dolore magna <QuestionMark />
+          {t("searchHelperText")}
+          <StyledIcons src={QuestionMark} />
         </span>
       )}
     </div>

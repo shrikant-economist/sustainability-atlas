@@ -4,10 +4,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 14px 104px;
+  padding: 14px 156px 14px 104px;
   gap: 20px;
   position: absolute;
   top: 80%;
+  box-sizing: border-box;
 }
 .search_box_div {
   width: 100%;
@@ -19,24 +20,22 @@
 
 .search_box {
   width: 100%;
-  min-height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: 20px; */
   background-color: #fff;
   border-radius: 100px;
   border: 1px solid #000;
-  background: var(--London-London-100, #fff);
+  background: #fff;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) !important;
   border: none;
   padding: 17px 0 17px 40px !important;
 }
 
 .css-66dh3a-MuiInputBase-input-MuiInput-input {
-  color: var(--London-London-5, var(--London-London-5, #0d0d0d)) !important;
+  color: #0d0d0d !important;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Econ Sans", sans-serif !important;
+  font-family: 'Econ Sans', sans-serif !important;
   font-size: 22px !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -45,9 +44,9 @@
   caret-shape: block;
 }
 .css-1hdk7t2-MuiInputBase-root-MuiInput-root {
-  color: var(--London-London-5, var(--London-London-5, #0d0d0d)) !important;
+  color: #0d0d0d !important;
   font-variant-numeric: lining-nums proportional-nums !important;
-  font-family: 'Econ Sans' !important;
+  font-family: 'Econ Sans', sans-serif !important;
   font-size: 22px !important;
   font-style: normal !important;
   font-weight: 400 !important;
@@ -59,7 +58,7 @@
 
 .css-66dh3a-MuiInputBase-input-MuiInput-input::placeholder {
   padding-left: 6px !important;
-  color: var(--London-London-35, var(--London-London-35, #595959)) !important;
+  color: var#595959 !important;
   font-variant-numeric: lining-nums proportional-nums !important;
 }
 
@@ -82,14 +81,15 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  color: var(--London-London-100, var(--London-London-100, #fff));
+  color: #fff;
   text-align: center;
-  font-family: 'Econ Sans';
+  font-family: 'Econ Sans', sans-serif;
   font-size: 11px;
   font-style: normal;
   font-weight: 500;
-  line-height: 140%; /* 15.4px */
+  line-height: 140%;
   letter-spacing: -0.006px;
+  padding-left: 52px;
 }
 
 .cursor_pointer {
@@ -99,11 +99,11 @@
 @media screen and (max-width: 768px) {
   .main_div {
     padding: 18px 20px;
+    top: 70%;
   }
 
   .search_box {
     display: inline-flex;
-    min-height: 50px;
     padding: 11px 16px 11px 16px !important;
     flex-direction: column;
     align-items: flex-start;
@@ -138,5 +138,6 @@
   .help_text_span {
     justify-content: flex-start;
     text-align: left;
+    padding: 0px;
   }
 }
