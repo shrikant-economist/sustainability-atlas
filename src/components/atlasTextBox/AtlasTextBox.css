@@ -1,0 +1,26 @@
+.atb-comp {
+    /* width: 548px; */
+    /* top: 1432px; */
+    /* left: 446px; */
+    height: 180px;
+    gap: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.atb-text {
+    width: 548px;
+    height: 180px;
+    gap: 0px;
+    flex-shrink: 0;
+    font-family: 'Econ Sans';
+    line-height: 36.3px;
+    text-align: left;
+    color: var(--London-London-100, #FFF);
+    font-variant-numeric: lining-nums proportional-nums;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+}
