@@ -1,0 +1,72 @@
+.card-stucture {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  border-radius: 8px;
+  margin: 0px;
+  padding: 16px;
+  gap: 10px;
+  background: #333;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.04);
+}
+
+.card-stucture:hover {
+  background: #464646;
+}
+
+.card-stucture:hover .default-button-css {
+  background: #127d66 !important;
+  color: #fff !important;
+}
+
+.card-header {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer-with-custom-button {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  gap: 0px;
+}
+
+.default-button-allignment {
+  margin-left: auto;
+}
+
+.default-button-css {
+  border-radius: 21px !important;
+  background: #fff !important;
+  width: 52px !important;
+  height: 32px !important;
+  flex-shrink: 0 !important;
+  color: #0d0d0d !important;
+  text-align: center !important;
+  font-variant-numeric: lining-nums proportional-nums !important;
+  font-family: 'Econ Sans' !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 140% !important;
+  text-transform: none !important;
+}
+
+.footer-custom-button-icon {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  height: 16px;
+  width: 16px;
+}
+
+.card-custom-footer {
+  margin: 0px;
+  padding: 0px;
+}
