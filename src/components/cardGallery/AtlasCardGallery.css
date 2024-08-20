@@ -1,0 +1,50 @@
+.atlas-card-gallery {
+  font-style: normal;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.category-section {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.category-font {
+  color: var(--London-London-100, var(--London-London-100, #fff));
+  font-family: 'Econ Sans';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.category-card-section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.custom-prompt-class {
+  color: var(--London-London-100, var(--London-London-100, #fff));
+  font-family: 'GT-Zirkon';
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -1.1px;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 130px;
+  margin-top: 26px;
+  background-color: #333;
+  position: absolute;
+  right: -20px;
+  top: 0;
+}

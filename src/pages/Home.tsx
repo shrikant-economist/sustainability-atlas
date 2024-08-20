@@ -1,10 +1,14 @@
 import React, { lazy, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import './Home.css';
 import imageUrl from './../assets/images/Intro 2.svg';
+import AtlasCardGallery from '../components/cardGallery/AtlasCardGallery';
 
-const TitleText = lazy(() => import('./../components/TitleText'));
 const AtlasImage = lazy(() => import('./../components/AtlasImage'));
 const AtlasSearchBox = lazy(() => import('../components/searchBox/AtlasSearchBox'));
+const AtlasTitleText = lazy(
+  () => import('../components/atlasTitleText/AtlasTitleText'),
+);
 
 const Home = () => {
   const { t } = useTranslation();
@@ -35,11 +39,16 @@ const Home = () => {
       <div className="app-atlas">
         <AtlasImage imageUrl={imageUrl} altText={t('altText')} />
       </div>
-      <TitleText
-        heading={t('heading')}
-        subHeading={t('subHeading')}
-        footer={t('footerText')}
-      />
+      <div>
+        <AtlasTitleText
+          title={t('title')}
+          text={t('text')}
+          footer={t('footer')}
+        />
+      </div>
+      <div className="home-atlas-card-gallery">
+        <AtlasCardGallery />
+      </div>
       <AtlasSearchBox
         value={searchValue}
         onChange={setSearchVal}
