@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import './SearchBox.css';
+import './AtlasSearchBox.css';
 import styled from '@emotion/styled';
 import SendIcon from '../../assets/icons/SendIcon.svg';
 import CrossBtn from '../../assets/icons/CrossBtn.svg';
@@ -11,7 +11,7 @@ const TextField = React.lazy(() => import('@mui/material/TextField'));
 const InputAdornment = React.lazy(() => import('@mui/material/InputAdornment'));
 import { useTranslation } from 'react-i18next';
 
-interface SearchBoxProps {
+interface AtlasSearchBoxProps {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
   handleSearch: () => void;
@@ -25,7 +25,7 @@ const StyledIcons = styled.img`
   width: auto;
 `;
 
-const SearchBox: React.FC<SearchBoxProps> = ({
+const AtlasSearchBox: React.FC<AtlasSearchBoxProps> = ({
   value,
   onChange,
   handleSearch,
@@ -101,4 +101,4 @@ const SearchBox: React.FC<SearchBoxProps> = ({
   );
 };
 
-export default SearchBox;
+export default AtlasSearchBox;

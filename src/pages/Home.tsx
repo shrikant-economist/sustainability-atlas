@@ -4,7 +4,7 @@ import imageUrl from './../assets/images/Intro 2.svg';
 
 const TitleText = lazy(() => import('./../components/TitleText'));
 const AtlasImage = lazy(() => import('./../components/AtlasImage'));
-const SearchBox = lazy(() => import('./../components/searchBox/SearchBox'));
+const AtlasSearchBox = lazy(() => import('../components/searchBox/AtlasSearchBox'));
 
 const Home = () => {
   const { t } = useTranslation();
@@ -40,7 +40,7 @@ const Home = () => {
         subHeading={t('subHeading')}
         footer={t('footerText')}
       />
-      <SearchBox
+      <AtlasSearchBox
         value={searchValue}
         onChange={setSearchVal}
         handleSearch={handleSearch}
