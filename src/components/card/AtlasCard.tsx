@@ -2,7 +2,7 @@ import React from 'react';
 import './AtlasCard.css';
 import { Button } from '@mui/material';
 
-type SimpleCardProps = {
+type AtlasCardProps = {
   isHeaderVisible?: boolean;
   headerContent?: React.ReactNode;
   isBodyVisible?: boolean;
@@ -15,7 +15,7 @@ type SimpleCardProps = {
   customFooterContent?: React.ReactNode;
 };
 
-// SimpleCard component
+// AtlasCard component
 // This component is a simple card structure with header, body, and footer.
 // It can be used to display data or content in a structured manner.
 // It accepts the following props:
@@ -30,7 +30,7 @@ type SimpleCardProps = {
 // - isCustomFooterVisible: A boolean prop to show/hide the custom footer content.
 // - customFooterContent: A ReactNode prop to render the custom footer content.
 
-const SimpleCard = ({
+const AtlasCard = ({
   isHeaderVisible,
   headerContent,
   isBodyVisible,
@@ -41,7 +41,7 @@ const SimpleCard = ({
   footerCustomButtonIcon,
   isCustomFooterVisible,
   customFooterContent,
-}: SimpleCardProps) => {
+}: AtlasCardProps) => {
   return (
     <div className="card-stucture">
       {isHeaderVisible && headerContent && (
@@ -71,4 +71,4 @@ const SimpleCard = ({
   );
 };
 
-export default SimpleCard;
+export default AtlasCard;
