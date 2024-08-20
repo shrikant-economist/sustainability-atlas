@@ -1,0 +1,28 @@
+.at-comp {
+    /* width: 1442px; */
+    /* top: 1199px; */
+    /* left: -2px; */
+    /* padding: 0px 368px 0px 368px; */
+    height: 53px;
+    gap: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.at-text {
+    width: 706px;
+    height: 53px;
+    left: 368px;
+    gap: 0px;
+    font-family: 'GT-Zirkon';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52.8px;
+    text-align: center;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-style: normal;
+    letter-spacing: -2.4px;
+}

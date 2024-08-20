@@ -4,8 +4,10 @@ import './Home.css';
 import imageUrl from './../assets/images/Intro 2.svg';
 import AtlasCardGallery from '../components/cardGallery/AtlasCardGallery';
 
-const TitleText = lazy(() => import('./../components/TitleText'));
 const AtlasImage = lazy(() => import('./../components/AtlasImage'));
+const AtlasTitleText = lazy(
+  () => import('../components/atlasTitleText/AtlasTitleText'),
+);
 
 const Home = () => {
   const { t } = useTranslation();
@@ -18,10 +20,10 @@ const Home = () => {
         <AtlasImage imageUrl={imageUrl} altText={t('altText')} />
       </div>
       <div>
-        <TitleText
-          heading={t('heading')}
-          subHeading={t('subHeading')}
-          footer={t('footerText')}
+        <AtlasTitleText
+          title={t('title')}
+          text={t('text')}
+          footer={t('footer')}
         />
       </div>
       <div className="home-atlas-card-gallery">
