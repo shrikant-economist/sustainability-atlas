@@ -1,5 +1,5 @@
 import React from 'react';
-import './SimpleCard.css';
+import './AtlasCard.css';
 import { Button } from '@mui/material';
 
 type SimpleCardProps = {
