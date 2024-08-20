@@ -7,18 +7,10 @@ const AtlasCardGallery = () => {
       {
         prompt: 'Which European countries are best prepared to handle floods?',
       },
-      {
-        prompt: 'Which countries are managing their water most effectively?',
-      },
     ],
     vulnerability: [
       {
         prompt: 'Which African countries are most vulnerable to drought?',
-      },
-    ],
-    drivers: [
-      {
-        prompt: 'What makes countries high performers in sustainability?',
       },
     ],
   };
