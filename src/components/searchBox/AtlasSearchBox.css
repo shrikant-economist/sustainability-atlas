@@ -7,8 +7,9 @@
   padding: 14px 156px 14px 104px;
   gap: 20px;
   position: absolute;
-  top: 80%;
+  /* top: 80%; */
   box-sizing: border-box;
+  margin-top: 720px;
 }
 .search_box_div {
   width: 100%;
@@ -99,7 +100,8 @@
 @media screen and (max-width: 768px) {
   .main_div {
     padding: 18px 20px;
-    top: 70%;
+    top: 78%;
+    margin-top: 0px;
   }
 
   .search_box {
