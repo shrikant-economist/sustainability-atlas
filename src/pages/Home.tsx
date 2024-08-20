@@ -2,8 +2,11 @@ import React, { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import imageUrl from './../assets/images/Intro 2.svg';
 
-const TitleText = lazy(() => import('./../components/TitleText'));
 const AtlasImage = lazy(() => import('./../components/AtlasImage'));
+const AtlasText = lazy(() => import('../components/atlasText/AtlasText'));
+const AtlasTextBox = lazy(() => import('../components/atlasTextBox/AtlasTextBox'));
+const AtlasTitleText = lazy(() => import('../components/atlasTitleText/AtlasTitleText'));
+const AtlasFooterText = lazy(() => import('../components/atlasFooterText/AtlasFooterText'));
 
 const Home = () => {
   const { t } = useTranslation();
@@ -15,10 +18,10 @@ const Home = () => {
       <div className="app-atlas">
         <AtlasImage imageUrl={imageUrl} altText={t('altText')} />
       </div>
-      <TitleText
-        heading={t('heading')}
-        subHeading={t('subHeading')}
-        footer={t('footerText')}
+      <AtlasTitleText
+        title={t('title')}
+        text={t('text')}
+        footer={t('footer')}
       />
     </div>
   );
