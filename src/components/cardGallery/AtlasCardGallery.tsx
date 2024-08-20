@@ -2,17 +2,37 @@ import './AtlasCardGallery.css';
 import AtlasCard from '../card/AtlasCard';
 
 const AtlasCardGallery = () => {
-  const prompts: { [key: string]: { prompt: string }[] } = {
-    performance: [
+  const prompts: { [key: string]: { prompt: any }[] } = {
+    PERFORMANCE: [
       {
-        prompt: 'Which European countries are best prepared to handle floods?',
+        prompt: (
+          <p>
+            Which <span className="card-overlay-text">European</span> countries
+            are best prepared to handle{' '}
+            <span className="card-overlay-text">floods</span> ?
+          </p>
+        ),
+      },
+      // {
+      //   prompt: 'Which countries are managing their water most effectively?',
+      // },
+    ],
+    VULNERABILITIES: [
+      {
+        prompt: (
+          <p>
+            Which <span className="card-overlay-text">African</span> countries
+            are most vulnerable to{' '}
+            <span className="card-overlay-text">drought</span> ?
+          </p>
+        ),
       },
     ],
-    vulnerability: [
-      {
-        prompt: 'Which African countries are most vulnerable to drought?',
-      },
-    ],
+    // DRIVERS: [
+    //   {
+    //     prompt: 'What makes countries high performers in sustainability?',
+    //   },
+    // ],
   };
 
   return (

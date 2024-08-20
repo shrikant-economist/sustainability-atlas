@@ -8,12 +8,12 @@ import AppRouter from './Router';
 const theme = createTheme({
   palette: {
     primary: {
-      main: import.meta.env.REACT_APP_THEME_COLOR || '#1976d2',
+      main: import.meta.env.VITE_THEME_COLOR || '#1976d2',
     },
   },
 });
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="app">
       <ThemeProvider theme={theme}>
@@ -26,11 +26,11 @@ function App() {
             />
           }
         >
-          <AppRouter />
+          <AppRouter data-testid="app-router"/>
         </Suspense>
       </ThemeProvider>
     </div>
   );
-}
+};
 
 export default App;

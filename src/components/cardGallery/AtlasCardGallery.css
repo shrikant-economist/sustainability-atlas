@@ -48,3 +48,10 @@
   right: -20px;
   top: 0;
 }
+
+.card-overlay-text {
+  color: #127D66;
+  background-color: #D2F9F0;
+  border-radius: 5px;
+  padding: 2px;
+}

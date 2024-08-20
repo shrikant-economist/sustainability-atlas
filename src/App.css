@@ -1,7 +1,9 @@
 .app {
   background: #1A1A1A;
-  height: 100vh;
-  background-repeat: no-repeat;
+  height: auto;
+  /* background-repeat: no-repeat; */
+  /* background: linear-gradient(180deg, #1A1A1A 20%, rgba(26, 26, 26, 0.00) 100%); */
+  padding: 0 0 32rem 0;
 }
 
 .app-header {
