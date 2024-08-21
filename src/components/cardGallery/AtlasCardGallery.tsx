@@ -2,7 +2,7 @@ import './AtlasCardGallery.css';
 import AtlasCard from '../card/AtlasCard';
 
 const AtlasCardGallery = () => {
-  const prompts: { [key: string]: { prompt: any }[] } = {
+  const prompts: { [key: string]: { prompt: unknown }[] } = {
     PERFORMANCE: [
       {
         prompt: (
@@ -13,9 +13,10 @@ const AtlasCardGallery = () => {
           </p>
         ),
       },
-      // {
-      //   prompt: 'Which countries are managing their water most effectively?',
-      // },
+      {
+        prompt:
+          <p>Which countries are managing their <span className="card-overlay-text">water</span> most effectively?</p>,
+      },
     ],
     VULNERABILITIES: [
       {
@@ -28,11 +29,11 @@ const AtlasCardGallery = () => {
         ),
       },
     ],
-    // DRIVERS: [
-    //   {
-    //     prompt: 'What makes countries high performers in sustainability?',
-    //   },
-    // ],
+    DRIVERS: [
+      {
+        prompt: <p>What makes countries high performers in <span className="card-overlay-text">sustainability</span> ?</p>,
+      },
+    ],
   };
 
   return (

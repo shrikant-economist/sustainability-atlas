@@ -1,9 +1,9 @@
 import React, { lazy, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
-import imageUrl from './../assets/images/Intro 2.svg';
+// import imageUrl from './../assets/images/Intro 2.svg';
 import AtlasCardGallery from '../components/cardGallery/AtlasCardGallery';
-import atlasimage from './../assets/images/60bc6e343b275bcafaba53463049d6ba.png'
+import atlasimage from './../assets/images/globe.png'
 const AtlasImage = lazy(() => import('./../components/AtlasImage'));
 const AtlasSearchBox = lazy(() => import('../components/searchBox/AtlasSearchBox'));
 const AtlasTitleText = lazy(
